@@ -1,3 +1,5 @@
+// @import './mediaqueries.scss';
+
 .home-container{
     height: 100vh;
 }
@@ -36,23 +38,84 @@
             display: flex;
             justify-content: center;
             .bt1{
-                border: 12px red;
+                border-color: black;
                 width: 150px;
                 border-radius: 20px;
                 padding: 10px;
                 margin-right: 10px;
             }
+            .bt1:hover{
+                border-color: white;
+                background-color: black;
+                color: white;
+            }
             .bt2{
-                border: 12px red;
+                border-color: white;
                 width: 150px;
                 border-radius: 20px;
                 padding: 10px;
                 background-color: black;
                 color: white;
                 margin-left: 10px;
-
+            }
+            .bt2:hover{
+                border-color: black;
+                background-color: white;
+                color: black;
             }
         }
    }
-   
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+      flex-direction: column;
+        .part1{
+            height: 50%;
+            flex: 1;
+            .container-img{
+                // height: 100%;
+                justify-content: center;
+                align-items: flex-end;
+                // margin-bottom: 12px;
+                img{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .part2{
+            height: 50%;
+            flex: 1;
+            .container-text{
+                align-items: flex-start;
+            }
+        }
+    }
+    @media screen and (max-width: 769px) and (min-width: 445px) {
+    .home {
+        flex-direction: column;
+
+        .part1 {
+            flex: 1;
+            height: 50%; /* Cada elemento ocupa el 50% de la altura disponible */
+            .container-img {
+                justify-content: center;
+                margin-right:20px;
+                align-items: flex-end;
+                img{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .part2 {
+            flex: 1;
+            height: 50%; /* Cada elemento ocupa el 50% de la altura disponible */
+            .container-text {                
+                align-items: flex-start;
+                justify-content: center;
+            }
+        }
+    }
+    }
 }
